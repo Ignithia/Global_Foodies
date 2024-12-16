@@ -1,10 +1,8 @@
-/* General Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
-  max-width: fit-content;
 }
 
 body {
@@ -22,7 +20,6 @@ header,
 footer {
   background-color: #fff;
   padding: 10px 20px;
-  max-width: fit-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,7 +55,6 @@ nav ul li a:hover {
   font-size: 1.5rem;
 }
 
-/* Product Section */
 main {
   padding: 20px;
 }
@@ -71,6 +67,11 @@ main {
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 30px;
+}
+
+.product-image {
+  display: flex;
+  flex-direction: column;
 }
 
 .product-image img {
@@ -158,7 +159,6 @@ main {
   margin-bottom: 10px;
 }
 
-/* Footer */
 footer {
   display: flex;
   justify-content: space-between;
@@ -187,6 +187,8 @@ footer {
   font-size: 1.2rem;
   cursor: pointer;
 }
+
+/*mobile only*/
 @media only screen and (max-width: 600px) {
   body {
     background-color: #ffffff;
@@ -199,7 +201,10 @@ footer {
     justify-content: center;
   }
   header .logo {
-    order: 2;
+    align-self: center;
+  }
+  header .logo img {
+    width: 20%;
   }
   .product {
     flex-direction: column;
