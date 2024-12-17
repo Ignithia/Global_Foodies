@@ -207,11 +207,6 @@ main {
 .btn:hover {
   background-color: #c72e3e;
 }
-.sizes {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-}
 
 .suggestions-title {
   font-size: small;
