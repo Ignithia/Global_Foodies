@@ -82,8 +82,18 @@ main {
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 30px;
+  justify-content: center;
 }
 
+.product h1 {
+  font-weight: normal;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .product-image {
   display: flex;
   flex-direction: column;
@@ -101,10 +111,10 @@ main {
 
 .price {
   font-size: 1.5rem;
-  color: #e63946;
+  color: #000;
+  font-weight: bold;
   margin-bottom: 10px;
 }
-
 .colors p,
 .quantity p {
   margin-bottom: 5px;
@@ -122,18 +132,45 @@ main {
   display: inline-block;
   border: 1px solid #ccc;
 }
+.color-options a {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.color-options img {
+  width: 20%;
+  min-width: 50px;
+  min-height: 50px;
+}
 
-.color.white {
-  background-color: #fff;
+.sizes {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-direction: column;
 }
-.color.black {
-  background-color: #000;
+.size-options a {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #fafafa;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  text-align: center;
 }
-.color.green {
-  background-color: green;
+.quantity {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.color.yellow {
-  background-color: gold;
+.quantity .btn {
+  width: 75%;
+  margin-left: 10px;
 }
 
 .quantity input {
@@ -141,8 +178,24 @@ main {
   padding: 5px;
 }
 
+.betaalmethodes p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.payment-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.payment-options img {
+  width: 20%;
+  max-height: 50px;
+  max-width: 50px;
+  margin: auto;
+}
 .btn {
-  background-color: #e63946;
+  background-color: #000;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -154,6 +207,18 @@ main {
 .btn:hover {
   background-color: #c72e3e;
 }
+.sizes {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.suggestions-title {
+  font-size: small;
+  font-weight: bold;
+  text-align: center;
+  display: none;
+}
 
 .suggestions {
   display: grid;
@@ -163,16 +228,55 @@ main {
 
 .suggestion-item {
   text-align: center;
-  background: #fff;
   padding: 15px;
-  border-radius: 8px;
+  height: fit-content;
 }
-
 .suggestion-item img {
-  max-width: 100px;
+  padding: 0 80px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  height: 50%;
   margin-bottom: 10px;
 }
+.suggestion-item .Lunchbox {
+  padding: 0;
+  max-height: 233px;
+}
+.suggestion-details {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  justify-content: space-between;
+}
+.suggestion-details div {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.suggestion-details p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.bag-btn {
+  display: flex;
+  background-color: #fdc543;
+  border-radius: 10px;
+  padding: 5px;
 
+  justify-content: center;
+  align-items: center;
+  max-width: 40px;
+  max-height: 40px;
+}
+.bag-btn img {
+  padding: 0;
+  background-color: transparent;
+  margin-bottom: 0;
+  width: 80%;
+  height: 80%;
+  min-width: 80%;
+}
 footer {
   display: flex;
   justify-content: space-between;
@@ -217,7 +321,15 @@ footer {
   text-decoration: none;
   cursor: pointer;
 }
-
+.footer-nav li a {
+  color: #e63946;
+}
+.footer-contact p {
+  font-weight: bold;
+}
+.footer-contact .contact {
+  color: #e63946;
+}
 /*mobile only*/
 @media only screen and (max-width: 600px) {
   .burger {
@@ -265,7 +377,7 @@ footer {
     width: 100%;
   }
   .suggestion-item p,
-  .price,
+  .suggestion-item .price,
   #Bestekpot {
     display: none;
   }
@@ -273,6 +385,14 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+  }
+  .suggestion-item img {
+    padding: 0;
+    height: 20%;
+    max-width: 100%;
+  }
+  .bag-btn {
+    display: none;
   }
   .footer-logo img {
     width: 40%;
@@ -293,5 +413,8 @@ footer {
   }
   footer .mail {
     font-size: 12px;
+  }
+  .suggestions-title {
+    display: block;
   }
 }
